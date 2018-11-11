@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>  
+function validateform(){  
+var FirstName=document.myform.FirstName.value;  
+var LastName=document.myform.LastName.value;  
+var Phone=document.myform.Phone.value; 
+var Email=document.myform.Email.value;
+var Password=document.myform.Password.value;  
+
+
+if (FirstName==null || !(isNaN(FirstName))){  
+  alert("FirstName can't be blank or can't be number");  
+  return false;  
+}
+else if (LastName==null || !(isNaN(LastName))){  
+  alert("LastName can't be blank or can't be number");  
+  return false;
+}else if (Email==null){  
+  alert("Email can not be empty");  
+  return false;
+}else if (Phone==null || isNaN(Phone) || Phone.length!=10){  
+  alert("Please Phone Number again");  
+  return false;
+}else if(Password.length<4){  
+  
+  alert("Password must be at least 4 characters long.");  
+  return false;  
+  }  
+}  
+</script>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registration</title>
+<meta name="keywords" content="free css templates, education, school, college, university, templatemo.com" />
+<meta name="description" content="Education template is for academic related websites" />
+
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="templatemo_header_wrapper">
+    <div id="templatemo_header">
+    	
+
+    </div> <!-- end of templatemo_header -->
+
+</div> <!-- end of templatemo_menu_wrapper -->
+<div id="templatemo_menu_wrapper">
+    <div id="templatemo_menu">
+        
+         <ul>
+           <li><a href="Visitor.html">Home</a></li>
+                    <li><a href="LoginAdmin.html">Adminstrator</a></li>
+                    <li><a href="Registration.html">Registration</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="VisitorChecker.jsp">Available Domains</a></li>
+                    <li><a href="contactus.jsp">Contact Us</a></li>
+                </ul>    	
+     
+    </div> <!-- end of templatemo_menu -->
+</div>
+<div id="templatemo_content_wrapper" align="center">
+
+	
+    <div id="templatemo_content">
+    
+    	<div class="content_box">
+        
+        	<h2>Please Register yourself here</h2>
+                <form name="myform" action="./RegisterServlet" method="POST" onsubmit="return validateform()" >
+                    </br>
+                    </br>
+                <table border="0" align="center">
+                <tr><td>First Name:</td><td><input type="text" placeholder="Enter First Name" name="FirstName"/><br/></td></tr> 
+                <tr><td>Last Name:</td><td><input type="text"  placeholder="Enter Last Name" name="LastName"/><br/></td></tr>
+                <tr><td>Phone Number:</td><td><input type="text" placeholder="Enter Phone Number" name="Phone"/></td></tr>  
+                <tr><td>Email Address</td><td><input type="email" placeholder="Enter Email" name="Email"/></td></tr>
+                <tr><td>Password</td><td><input type="password" placeholder="Enter Password" name="Password"/></td></tr>
+                </table>
+                    </br>
+
+                <input type="submit" value="Submit" align="center"/>  
+
+                </form>
+            
+           
+        	<div class="cleaner"></div>
+        </div><div class="content_box_bottom" align="center"></div>
+        
+        
+    
+    </div> <!-- end of content -->
+    
+    <div class="cleaner"></div>
+
+</div>
+
+<div id="templatemo_footer_wrapper">
+
+    <div id="templatemo_footer">
+    
+        <ul class="footer_menu">
+           <li><a href="Visitor.html">Home</a></li>
+                    <li><a href="LoginAdmin.html">Adminstrator</a></li>
+                    <li><a href="Registration.html">Registration</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="VisitorChecker.jsp">Available Domains</a></li>
+                    <li><a href="contactus.jsp">Contact Us</a></li>
+                </ul>    
+    </div>
+</div>
+</body>
+</html>
